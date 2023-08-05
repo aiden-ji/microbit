@@ -1,7 +1,15 @@
 add = 0
 count = 0
-speed = 13
+speed = 50
+def slow():
+    global speed
+    speed += -10
+input.on_button_pressed(Button.A, slow)
 
+def fast():
+    global speed
+    speed += 10
+input.on_button_pressed(Button.B, fast)
 def on_forever():
     global add, count
     if count == 0:
